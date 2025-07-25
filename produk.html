@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produk - Philips Staidre & Electrical</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-left">
+      <h2>Philips</h2>
+    </div>
+    <div class="nav-right">
+      <a href="index.html">Beranda</a>
+      <a href="produk.html" class="active">Produk</a>
+      <a href="about.html">about</a>
+    </div>
+  </nav>
+
+  <!-- KONTEN -->
+  <div class="container">
+    <h1>PRODUK</h1>
+    <p>Temukan berbagai produk untuk kebutuhan proyek dan Teknis Anda.</p>
+    <div class="product-section">
+    <div class="product-grid" id="product-grid"></div>
+    </div>
+  </div>
+
+
+
+  <!-- SCRIPT -->
+
+  <script>
+  
+  const products = [
+  { src: 'image/pipa listrik(1).jpg', name: 'Pipa Listrik', price: 'Rp25.000' },
+  { src: 'image/kabel bening(1).jpg', name: 'Kabel Bening', price: 'Rp4.000 (per meter), Rp55.000 (1 roll)' },
+  { src: 'image/lampu philips(1).jpeg', name: 'Lampu Philips', price: ['Rp35.000', '(3 watt)'] },
+  { src: 'image/mata gulindra(1).jpg', name: 'Mata Gulindra', price: 'Rp15.000' },
+  { src: 'image/paku(1).jpg', name: 'Paku', price: ['Rp20.000', '(1 bungkus)'] },
+  { src: 'image/regulator+selang.png', name: 'Regulator + Selang', price: 'Rp135.000' },
+  { src: 'image/saklar lampu=colokan(1).jpg', name: 'Saklar + Colokan', price: 'Rp25.000 (1 lubang), Rp30.000 (2 lubang)' },
+  { src: 'image/sambungan pipa(1).jpeg', name: 'Sambungan Pipa', price: 'Rp5.000' },
+  { src: 'image/solasi pipa(1).jpg', name: 'Solasi Pipa', price: 'Rp5.000' },
+  { src: 'image/kaos tangan.jpg', name: 'Kaos Tangan', price: 'Rp5.000' },
+  { src: 'image/engsel pintu.jpg', name: 'Engsel Pintu', price: 'Rp20.000' },
+  { src: 'image/kunci lemari.jpg', name: 'Kuncian Lemari', price: 'Rp20.000' },
+  { src: 'image/pitting lampu.jpg', name: 'Fitting Lampu Gantung', price: 'Rp5.000' },
+  { src: 'image/kabel listrik.jpg', name: 'Kabel Listrik', price: 'Rp8.000' },
+  { src: 'image/colokan 5k.jpeg', name: 'Colokan', price: 'Rp5.000' },
+  { src: 'image/colokan.jpeg', name: 'Colokan', price: 'Rp10.000' },
+  { src: 'image/lem besi.jpg', name: 'Lem Besi', price: 'Rp20.000' },
+  { src: 'image/paku 2.jpeg', name: 'Paku', price: ['Rp30.000', '(1 kg, 0.5 kg, dst)'] },
+  { src: 'image/stop kontak tanpa(1).png', name: 'Stop Kontak (Tanpa Kabel)', price: 'Rp10.000' },
+  { src: 'image/stop kontak tanpa(1).png', name: 'Stop Kontak (Tanpa Kabel)', price: 'Rp15.000' },
+  { src: 'image/stop kontak tanpa(1).png', name: 'Stop Kontak (Tanpa Kabel)', price: 'Rp20.000' },
+  { src: 'image/stop kontak tanpa(1).png', name: 'Stop Kontak (Tanpa Kabel)', price: 'Rp25.000' },
+  { src: 'image/stop kontak tanpa.png', name: 'Stop Kontak (Tanpa Kabel)', price: 'Rp35.000' },
+  { src: 'image/stop kontak kabel.png', name: 'Stop Kontak (Dengan Kabel)', price: 'Rp27.000' },
+  { src:  'image/stop kontak kabel.png', name: 'Stop Kontak (Dengan Kabel)', price: 'Rp35.000' },
+  { src:  'image/stop kontak kabel.png', name: 'Stop Kontak (Dengan Kabel)', price: 'Rp40.000' },
+  { src:  'image/stop kontak kabel.png', name: 'Stop Kontak (Dengan Kabel)', price: 'Rp50.000' },
+  { src: 'image/lampu philips(1).jpeg', name: 'Lampu Philips', price: ['Rp45.000', '(5 watt)'] },
+  { src: 'image/lampu philips(1).jpeg', name: 'Lampu Philips', price: ['Rp50.000', '(9 watt)'] },
+  { src: 'image/lampu philips(1).jpeg', name: 'Lampu Philips', price: ['Rp65.000', '(13 watt)'] }
+];
+
+
+
+    const productGrid = document.getElementById('product-grid');
+products.forEach(product => {
+  const div = document.createElement('div');
+  div.className = 'product';
+  
+  const priceHTML = Array.isArray(product.price)
+    ? product.price.map(p => `<div>${p}</div>`).join('')
+    : `<div>${product.price}</div>`;
+
+  div.innerHTML = `
+    <img src="${product.src}" alt="${product.name}">
+    <div class="name">${product.name}</div>
+    <div class="price">
+  ${Array.isArray(product.price) 
+    ? product.price.map(p => `<div>${p}</div>`).join('') 
+    : `<div>${product.price}</div>`}
+</div>`
+  productGrid.appendChild(div);
+});
+ 
+// const itemsPerPage = 3;
+// const gallery = document.getElementById('gallery')
+// const gallery = document.getElementById('pagination')
+
+// function renderPage(page)
+//   galler.innerHTML= ' '
+//   const start = (page - 1) *itemsPerPage;
+//   const end = start = itemsPerPage;
+//   const pageItems = images.slice(start, end),
+
+//   pageItems.forEach(imgSrc => {
+//     const img = document.createElement('img');
+//     img.src = imgSrc;
+//     gallery.appendChild(img)
+//   });
+
+//   function renderPagination() {
+//     const totalPages = Math.ceil(images.length / itemsPerPage);
+//     for (let i = 1; i <=totalPages, i++) {
+//       const btn = document.createComment('button');
+//       btn.textContent = i;
+//       btn.addEventListener('click', renderPage(i));
+//       if (i === 1) btn.classList.add('active');
+//       pagination.appendChild(btn); 
+//     }
+//   }
+
+//   renderPage();
+//   renderPage(1);
+
+
+  </script>
+  
+
+</body>
+</html>
