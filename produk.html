@@ -1,131 +1,134 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
+<head> 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Produk - Philips Staidre & Electrical</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=L  ato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav>
-    <div class="nav-left">
-      <h2>Philips</h2>
+    <div class="nav-container">
+      <div class="nav-left">
+        <h2>Philips</h2>
+      </div>
+      <button class="burger-menu" onclick="toggleMenu()">☰</button>
     </div>
-    <div class="nav-right">
-      <a href="index.html">Beranda</a>
-      <a href="produk.html" class="active">Produk</a>
-      <a href="about.html">about</a>
+
+
+    <div class="nav-right" id="navMenu">
+      <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+      <a href="produk.html" class="active"><i class="fas fa-box-open"></i> Produk</a>
+      <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
     </div>
   </nav>
 
   <!-- KONTEN -->
-  <div class="container">
-    <h1>PRODUK</h1>
-    <p>Temukan berbagai produk untuk kebutuhan proyek dan Teknis Anda.</p>
-    <div class="product-section">
-    <div class="product-grid" id="product-grid"></div>
-    </div>
+<div class="min-[480px]:mt-20 max-[770px]:mt-10 min-[771px]:mt-0 w-screen min-h-2 p-6 bg-gray-100">
+  <h1 class="text-center text-5xl lg:text-6xl font-roboto font-black ">PRODUK</h1>
+  <p class="text-center text-xs font-tiktok font-normal mt-2 mb-6">
+    Temukan berbagai produk untuk kebutuhan proyek dan Teknis Anda.
+  </p>
+
+  <div class="product-section">
+    <div id="product-grid" class="grid grid-cols-2 max-sm:h-72px max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"></div>
   </div>
+</div>
 
 
 
-  <!-- SCRIPT -->
-
-  <script>
-  
-  const products = [
-  { src: 'image/pipa listrik(1).jpg', name: 'Pipa Listrik', price: 'Rp25.000' },
-  { src: 'image/kabel bening(1).jpg', name: 'Kabel Bening', price: 'Rp4.000 (per meter), Rp55.000 (1 roll)' },
-  { src: 'image/lampu philips(1).jpeg', name: 'Lampu Philips', price: ['Rp35.000', '(3 watt)'] },
-  { src: 'image/mata gulindra(1).jpg', name: 'Mata Gulindra', price: 'Rp15.000' },
-  { src: 'image/paku(1).jpg', name: 'Paku', price: ['Rp20.000', '(1 bungkus)'] },
-  { src: 'image/regulator+selang.png', name: 'Regulator + Selang', price: 'Rp135.000' },
-  { src: 'image/saklar lampu=colokan(1).jpg', name: 'Saklar + Colokan', price: 'Rp25.000 (1 lubang), Rp30.000 (2 lubang)' },
-  { src: 'image/sambungan pipa(1).jpeg', name: 'Sambungan Pipa', price: 'Rp5.000' },
-  { src: 'image/solasi pipa(1).jpg', name: 'Solasi Pipa', price: 'Rp5.000' },
-  { src: 'image/kaos tangan.jpg', name: 'Kaos Tangan', price: 'Rp5.000' },
-  { src: 'image/engsel pintu.jpg', name: 'Engsel Pintu', price: 'Rp20.000' },
-  { src: 'image/kunci lemari.jpg', name: 'Kuncian Lemari', price: 'Rp20.000' },
-  { src: 'image/pitting lampu.jpg', name: 'Fitting Lampu Gantung', price: 'Rp5.000' },
-  { src: 'image/kabel listrik.jpg', name: 'Kabel Listrik', price: 'Rp8.000' },
-  { src: 'image/colokan 5k.jpeg', name: 'Colokan', price: 'Rp5.000' },
-  { src: 'image/colokan.jpeg', name: 'Colokan', price: 'Rp10.000' },
-  { src: 'image/lem besi.jpg', name: 'Lem Besi', price: 'Rp20.000' },
-  { src: 'image/paku 2.jpeg', name: 'Paku', price: ['Rp30.000', '(1 kg, 0.5 kg, dst)'] },
-  { src: 'image/stop kontak tanpa(1).png', name: 'Stop Kontak (Tanpa Kabel)', price: 'Rp10.000' },
-  { src: 'image/stop kontak tanpa(1).png', name: 'Stop Kontak (Tanpa Kabel)', price: 'Rp15.000' },
-  { src: 'image/stop kontak tanpa(1).png', name: 'Stop Kontak (Tanpa Kabel)', price: 'Rp20.000' },
-  { src: 'image/stop kontak tanpa(1).png', name: 'Stop Kontak (Tanpa Kabel)', price: 'Rp25.000' },
-  { src: 'image/stop kontak tanpa.png', name: 'Stop Kontak (Tanpa Kabel)', price: 'Rp35.000' },
-  { src: 'image/stop kontak kabel.png', name: 'Stop Kontak (Dengan Kabel)', price: 'Rp27.000' },
-  { src:  'image/stop kontak kabel.png', name: 'Stop Kontak (Dengan Kabel)', price: 'Rp35.000' },
-  { src:  'image/stop kontak kabel.png', name: 'Stop Kontak (Dengan Kabel)', price: 'Rp40.000' },
-  { src:  'image/stop kontak kabel.png', name: 'Stop Kontak (Dengan Kabel)', price: 'Rp50.000' },
-  { src: 'image/lampu philips(1).jpeg', name: 'Lampu Philips', price: ['Rp45.000', '(5 watt)'] },
-  { src: 'image/lampu philips(1).jpeg', name: 'Lampu Philips', price: ['Rp50.000', '(9 watt)'] },
-  { src: 'image/lampu philips(1).jpeg', name: 'Lampu Philips', price: ['Rp65.000', '(13 watt)'] }
-];
-
-
-
+<script >
+fetch('data/produk.json')
+  .then(res => res.json())
+  .then(products => {
     const productGrid = document.getElementById('product-grid');
-products.forEach(product => {
-  const div = document.createElement('div');
-  div.className = 'product';
-  
-  const priceHTML = Array.isArray(product.price)
-    ? product.price.map(p => `<div>${p}</div>`).join('')
-    : `<div>${product.price}</div>`;
 
-  div.innerHTML = `
-    <img src="${product.src}" alt="${product.name}">
-    <div class="name">${product.name}</div>
-    <div class="price">
-  ${Array.isArray(product.price) 
-    ? product.price.map(p => `<div>${p}</div>`).join('') 
-    : `<div>${product.price}</div>`}
-</div>`
-  productGrid.appendChild(div);
-});
- 
-// const itemsPerPage = 3;
-// const gallery = document.getElementById('gallery')
-// const gallery = document.getElementById('pagination')
+    products.forEach(product => {
+      const encodedName = encodeURIComponent(product.name);
+      const priceHTML = Array.isArray(product.price)
+        ? product.price.map(p => `<div>${p}</div>`).join('')
+        : product.price;
 
-// function renderPage(page)
-//   galler.innerHTML= ' '
-//   const start = (page - 1) *itemsPerPage;
-//   const end = start = itemsPerPage;
-//   const pageItems = images.slice(start, end),
+              const div = document.createElement('div');
+            div.innerHTML = `
+              <div class="group p-4 flex flex-col items-center rounded-lg shadow hover:shadow-lg transition-shadow transform hover:scale-102 transition duration-330 ease-in-out">
+                <img src="${product.src}" alt="${product.name}" class="w-90  object-contain mb-1 rounded-lg">
 
-//   pageItems.forEach(imgSrc => {
-//     const img = document.createElement('img');
-//     img.src = imgSrc;
-//     gallery.appendChild(img)
-//   });
+                <div class="text-lg sm:text-xs font-semibold text-gray-900 mb-2 text-center">${product.name}</div>
+                <div class="relative h-6 w-full text-center overflow-hidden">
+                  <div class="absolute inset-0 transform transition duration-300 ease-in-out group-hover:-translate-y-6 group-hover:opacity-0">
+                    <span class="text-sm text-gray-600">${product.price}</span>
+                  </div>
 
-//   function renderPagination() {
-//     const totalPages = Math.ceil(images.length / itemsPerPage);
-//     for (let i = 1; i <=totalPages, i++) {
-//       const btn = document.createComment('button');
-//       btn.textContent = i;
-//       btn.addEventListener('click', renderPage(i));
-//       if (i === 1) btn.classList.add('active');
-//       pagination.appendChild(btn); 
-//     }
-//   }
+                  <a href="../detail/detail.html?produk=${encodedName}"
+                    class="absolute inset-0 transform translate-y-6 opacity-0 transition duration-300 ease-in-out group-hover:translate-y-0 group-hover:opacity-100 font-extrabold ">
+                    Baca selengkapnya 
+                  </a>
+                </div>
+              </div>
+            `;
+            productGrid.appendChild(div);
 
-//   renderPage();
-//   renderPage(1);
+        });
+      });
 
 
   </script>
-  
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector(".burger-menu");
+    const navMenu = document.querySelector(".nav-right");
+
+    if (burger && navMenu) {
+      burger.addEventListener("click", function () {
+        navMenu.classList.toggle("show");
+      });
+    }
+  });
+</script>
+
+<script>
+    
+  let lastScrollTop = 0;
+  const navMenu = document.getElementById("navMenu");
+
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && navMenu.classList.contains("show")) {
+      navMenu.classList.remove("show");
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+  });
+
+  document.addEventListener("click", function (event) {
+const navMenu = document.querySelector(".nav-right");
+const burger = document.querySelector(".burger-menu");
+
+if (
+  navMenu.classList.contains("show") &&
+  !navMenu.contains(event.target) &&
+  !burger.contains(event.target)
+) {
+  navMenu.classList.remove("show");
+}
+});
+
+</script>
+
+<script src="script.js"></script>
 
 </body>
 </html>

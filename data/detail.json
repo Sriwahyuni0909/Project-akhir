@@ -1,0 +1,116 @@
+[
+  {
+    "src": "../image/pipa listrik(1).jpg",
+    "name": "Pipa Listrik",
+    "price": "Rp25.000",
+    "deskripsi": "Pipa pelindung kabel listrik berbahan PVC, tahan panas dan cocok untuk instalasi rumah maupun gedung."
+  },
+  {
+    "src": "../image/kabel bening(1).jpg",
+    "name": "Kabel Bening",
+    "price": ["Rp4.000(per meter)", "Rp55.000 (roll 1 roll)"],
+    "deskripsi": "Kabel transparan fleksibel, cocok untuk sambungan ringan maupun instalasi besar."
+  },
+  {
+    "src": "../image/lampu philips(1).jpeg",
+    "name": "Lampu Philips",
+    "price": ["Rp35.000 (3 watt)", "Rp45.000 (5 watt)", "Rp50.000 (9 watt)", "Rp65.000 (13 watt)"],
+    "deskripsi": "Lampu LED hemat energi dengan pencahayaan terang, tahan lama, dan cocok untuk berbagai kebutuhan rumah maupun kantor."
+  },
+  {
+    "src": "../image/mata gulindra(1).jpg",
+    "name": "Mata Gulindra",
+    "price": "Rp15.000",
+    "deskripsi": "Mata bor berkualitas tinggi yang dirancang untuk pekerjaan presisi pada berbagai jenis permukaan, seperti kayu, besi, dan beton."
+  },
+  {
+    "src": "../image/kunci gembokk(2)(1).jpg",
+    "name": "Kunci Gembok",
+    "price": "Rp18.000",
+    "deskripsi": "Kunci gembok berbahan baja tahan karat, dirancang untuk keamanan maksimal pada pintu, pagar, dan barang berharga."
+  },
+  {
+    "src": "../image/regulator+selang.png",
+    "name": "Regulator + Selang",
+    "price": "Rp135.000",
+    "deskripsi": "Regulator gas lengkap dengan selang, aman dan praktis untuk kompor rumah tangga."
+  },
+  {
+    "src": "../image/saklar lampu=colokan(1).jpg",
+    "name": "Saklar + Colokan",
+    "price": ["Rp25.000 (1 Lubang)", "Rp30.000 (2 Lubang)"],
+    "deskripsi": "SPerangkat listrik multifungsi yang menggabungkan saklar dan colokan dalam satu unit, praktis untuk mengatur aliran listrik dan menyambungkan berbagai perangkat elektronik di rumah maupun kantor."
+  },
+  {
+    "src": "../image/sambungan pipa(1).jpeg",
+    "name": "Sambungan Pipa",
+    "price": "Rp5.000",
+    "deskripsi": "Sambungan pipa PVC untuk instalasi air dan listrik yang rapi."
+  },
+  {
+    "src": "../image/solasi pipa(1).jpg",
+    "name": "Solasi Pipa",
+    "price": "Rp5.000",
+    "deskripsi": "Solasi tahan panas untuk melindungi sambungan pipa dan kabel."
+  },
+  {
+    "src": "../image/kaos tangan.jpg",
+    "name": "Kaos Tangan",
+    "price": "Rp5.000",
+    "deskripsi": "Sarung tangan kerja berbahan kuat untuk perlindungan tangan saat bekerja."
+  },
+  {
+    "src": "../image/engsel pintu.jpg",
+    "name": "Engsel Pintu",
+    "price": "Rp20.000",
+    "deskripsi": "Engsel pintu baja tahan lama untuk pintu kayu dan besi."
+  },
+  {
+    "src": "../image/kunci lemari.jpg",
+    "name": "Kuncian Lemari",
+    "price": "Rp20.000",
+    "deskripsi": "Kunci lemari praktis untuk menjaga keamanan barang pribadi."
+  },
+  {
+    "src": "../image/pitting lampu.jpg",
+    "name": "Fitting Lampu Gantung",
+    "price": "Rp5.000",
+    "deskripsi": "Fitting lampu gantung standar untuk berbagai jenis bohlam."
+  },
+  {
+    "src": "../image/kabel listrik.jpg",
+    "name": "Kabel Listrik",
+    "price": "Rp8.000",
+    "deskripsi": "Kabel listrik berkualitas untuk instalasi rumah dan industri ringan."
+  },
+  {
+    "src": "../image/colokan 5k.jpeg",
+    "name": "Colokan",
+    "price": "Rp5.000",
+    "deskripsi": "Colokan listrik ekonomis untuk kebutuhan harian."
+  },
+  {
+    "src": "../image/colokan.jpeg",
+    "name": "Colokan",
+    "price": "Rp10.000",
+    "deskripsi": "Colokan listrik dengan bahan tahan panas dan desain ergonomis."
+  },
+  {
+    "src": "../image/lem besi.jpg",
+    "name": "Lem Besi",
+    "price": "Rp20.000",
+    "deskripsi": "Lem khusus untuk besi dan logam, daya rekat tinggi dan tahan lama."
+  },
+  {
+    "src": "../image/paku 2.jpeg",
+    "name": "Paku",
+    "price": ["Rp30.000 (1 Bungkus)", "Rp30.000 (1 kg, 0"],
+    "deskripsi": "Paku baja dalam berbagai ukuran untuk konstruksi dan pertukangan."
+  },
+  {
+    "src": "image/stop kontak tanpa(1).png",
+    "name": "Stop Kontak (Tanpa Kabel)",
+    "price": "Rp10.000",
+    "deskripsi": "Stop kontak praktis untuk pemasangan langsung di dinding."
+  }
+]

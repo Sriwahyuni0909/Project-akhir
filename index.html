@@ -1,69 +1,82 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
+<head>  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Beranda - Philips Staidre & Electrical</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/scroll-animation-js@1.0.8/dist/scroll-animation.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="home-page">
-
-
   <nav>
-    <div class="nav-left">
-      <h2>Philips</h2>
-    </div>
-    <div class="nav-right">
-      <a href="index.html" class="active">Beranda</a>
-      <a href="produk.html">Produk</a>
-      <a href="about.html">about</a>
+    <div class="nav-container">
+      <div class="nav-left">
+        <h2>Philips</h2>
+      </div>
       
+      <button class="burger-menu">☰</button>
+
+    </div>
+  
+    <div class="nav-right font-inter font-normal text-xl font-stretch-expanded" id="navMenu">
+      <a href="index.html" class="active"><i class="fas fa-home"></i> Beranda</a>
+      <a href="produk.html"><i class="fas fa-box-open"></i> Produk</a>
+      <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
     </div>
   </nav>
-  
 
-
-  <header class="hero">
+  <header class="hero text-shadow rounded-md text-">
     <div class="hero-images">
-      
-      <div class="image-wrapper">
-        <img src="image/lampu.jpeg" alt="lampu">
+      <div class="image-left">
+        <img src="image/lampu(1).jpg" alt="lampu" data-aos="fade-right" class="grayscale-45">
         <div class="text-overlay">
-          <h1>Philips Staidre & Electrical</h1>
-          <p style="text-align: left;">
-            Philips Staidre & Electrical menyediakan beragam produk hardware<br>
-           dan kelistrikan berkualitas tinggi untuk kebutuhan proyek<br>
-            dan teknis Anda.<br>
-          </p>
-          
+          <h1 class="font-tiktok font-black text-7xl">Staidre & Electrical</h1>
+          <p data-aos="zoom-in" class="font-medium text-2xl">Philips Staidre & Electrical menyediakan beragam produk hardware dan kelistrikan berkualitas tinggi untuk kebutuhan proyek dan teknis Anda.</p>
         </div>
       </div>
-      <img src="image/gagang.jpg" alt="Gagang Pintu">
+    
+      <div class="image-right">
+        <img src="image/gagang.jpg" alt="Gagang Pintu" data-aos="fade-left" class="grayscale-45 ">
+      </div>
     </div>
-
     
   </header>
   
 
   <section class="products-1">
-    <div class="product-1">
-      <img src="image/gembok.jpeg" alt="Gembok Kunci" />
-      <h3>Gembok Kunci</h3>
-      <p class="price-1">Rp 25.000</p>
-    </div>
-    <div class="product-1">
-      <img src="image/stop kontak.jpg" alt="Stop Kontak" />
-      <h3>Stop Kontak 4 Lubang</h3>
-      <p class="price-1">Rp 42.000</p>
-    </div>
-    <div class="product-1">
-      <img src="image/paku(1).jpg" alt="Paku Besi" />
-      <h3>Paku Besi Ukuran 5 cm</h3>
-      <p class="price-1">Rp 10.000</p>
-    </div>
+<a href="detail/detail.html?produk=Gembok%20Kunci&from=index">
+  <div class="product-1">
+    <img src="image/colokan listrik 3.jpeg" alt="Gembok Kunci" />
+    <h3 class="font-opensans  text-xl font-semibold">Colokan Listrik 3</h3>
+    <p class="price-1">Rp 25.000</p>
+  </div>
+</a>
+
+<a href="detail/detail.html?produk=Stop%20Kontak%204%20Lubang&from=index">
+  <div class="product-1">
+    <img src="image/dcote air kran.jpg" alt="Kran Tembok" />
+    <h3 class="font-opensans  text-xl font-semibold">Kran Tembok 1/2</h3>
+    <p class="price-1">Rp 30.000</p>
+  </div>
+</a>
+
+<a href="detail/detail.html?produk=Paku%20Besi%20Ukuran%205%20cm&from=index">
+  <div class="product-1">
+    <img src="image/paku(1).jpg"," alt="Paku" />
+    <h3 class="font-opensans  text-xl font-semibold">Kunci Gembok</h3>
+    <p class="price-1">Rp 20.000</p>
+  </div>
+</a>
+
   </section>
 
   <footer>
@@ -71,5 +84,50 @@
   </footer>
 
   <script src="script.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector(".burger-menu");
+    const navMenu = document.querySelector(".nav-right");
+
+    if (burger && navMenu) {
+      burger.addEventListener("click", function () {
+        navMenu.classList.toggle("show");
+      });
+
+      // Scroll untuk menutup menu
+      let lastScrollTop = 0;
+      window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && navMenu.classList.contains("show")) {
+          navMenu.classList.remove("show");
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+
+      // Klik di luar menu untuk menutup
+      document.addEventListener("click", function (event) {
+        if (
+          navMenu.classList.contains("show") &&
+          !navMenu.contains(event.target) &&
+          !burger.contains(event.target)
+        ) {
+          navMenu.classList.remove("show");
+        }
+      });
+    } else {
+      console.error("Elemen burger-menu atau nav-right tidak ditemukan");
+    }
+  });
+</script>
+
+  
+  <!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
 </body>
 </html>

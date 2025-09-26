@@ -1,0 +1,107 @@
+[
+  {
+    "src": "image/pipa listrik(1).jpg",
+    "name": "Pipa Listrik",
+    "price": "Rp25.000"
+  },
+  {
+    "src": "image/kabel bening(1).jpg",
+    "name": "Kabel Bening",
+    "price": "Rp4.000"
+  },
+  {
+    "src": "image/lampu philips(1).jpeg",
+    "name": "Lampu Philips",
+    "price": "Rp35.000"
+    
+  },
+  {
+    "src": "image/mata gulindra(1).jpg",
+    "name": "Mata Gulindra",
+    "price": "Rp15.000"
+  },
+  {
+    "src": "image/kunci gembokk(2)(1).jpg",
+    "name": "Kunci Gembok",
+    "price": "Rp18.000"
+    
+  },
+  {
+    "src": "image/regulator+selang.png",
+    "name": "Regulator + Selang",
+    "price": "Rp135.000"
+  },
+  {
+    "src": "image/saklar lampu=colokan(1).jpg",
+    "name": "Saklar + Colokan",
+    "price": "Rp25.000"
+  },
+  {
+    "src": "image/sambungan pipa(1).jpeg",
+    "name": "Sambungan Pipa",
+    "price": "Rp5.000"
+  },
+  {
+    "src": "image/solasi pipa(1).jpg",
+    "name": "Solasi Pipa",
+    "price": "Rp5.000"
+  },
+  {
+    "src": "image/kaos tangan.jpg",
+    "name": "Kaos Tangan",
+    "price": "Rp5.000"
+  },
+  {
+    "src": "image/engsel pintu.jpg",
+    "name": "Engsel Pintu",
+    "price": "Rp20.000"
+  },
+  {
+    "src": "image/kunci lemari.jpg",
+    "name": "Kuncian Lemari",
+    "price": "Rp20.000"
+  },
+  {
+    "src": "image/pitting lampu.jpg",
+    "name": "Fitting Lampu Gantung",
+    "price": "Rp5.000"
+  },
+  {
+    "src": "image/kabel listrik.jpg",
+    "name": "Kabel Listrik",
+    "price": "Rp8.000"
+  },
+  {
+    "src": "image/colokan 5k.jpeg",
+    "name": "Colokan",
+    "price": "Rp5.000"
+  },
+  {
+    "src": "image/colokan.jpeg",
+    "name": "Colokan",
+    "price": "Rp10.000"
+  },
+  {
+    "src": "image/lem besi.jpg",
+    "name": "Lem Besi",
+    "price": "Rp20.000"
+  },
+  {
+    "src": "image/paku 2.jpeg",
+    "name": "Paku",
+    "price":"Rp30.000"
+    
+  },
+  {
+    "src": "image/stop kontak tanpa(1).png",
+    "name": "Stop Kontak (Tanpa Kabel)",
+    "price": "Rp10.000"
+  },
+  {
+    "src": "image/lampu philips(1).jpeg",
+    "name": "Lampu Philips",
+    "price":  "Rp45.000"
+    
+  }
+]
+

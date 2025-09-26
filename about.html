@@ -4,44 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tentang Toko Philips</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav>
-    <div class="nav-left">
-      <h2>Philips</h2>
+    <div class="nav-container">
+      <div class="nav-left">
+        <h2>Philips</h2>
+      </div>
+      <button class="burger-menu" onclick="toggleMenu()">☰</button>
     </div>
-    <div class="nav-right">
-      <a href="index.html">Beranda</a>
-      <a href="produk.html" class="active">Produk</a>
-      <a href="about.html">about</a>
+  
+    <div class="nav-right" id="navMenu">
+      <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+      <a href="produk.html"><i class="fas fa-box-open"></i> Produk</a>
+      <a href="about.html" class="active"><i class="fas fa-info-circle"></i> About</a>
     </div>
   </nav>
 
 
 <!-- Konten -->
-  <main>
-    <section class="about-section">
-      <h1 class="about-title">ABOUT</h1>
+<main>
+  <section class="about-section justify-center">
+    <h1 class="about-title">ABOUT</h1>
 
-  <div class="about-content">
-       <div class="about-text">
-      <p class="p-1"><a href="https://www.philipss.com" target="_blank">www.philipss.com</a> adalah situs resmi dari <strong>Toko Philips</strong>, sebuah toko perlengkapan rumah dan elektrikal terpercaya yang berlokasi di Kabupaten Bulukumba, Sulawesi Selatan. beralamat di <a href="https://maps.app.goo.gl/QxcisYdfz69mPDgMA?g_st=ac">Jl. Poros Parukku, Desa Bulohloe, Dusun Parukku, Kecamatan Rilau Ale</a>, toko ini hadir untuk memenuhi kebutuhan masyarakat akan produk-produk rumah tangga dan instalasi listrik berkualitas.</p>
+    <div class="about-content justify-center">
+      <div class="about-text">
+        <p>
+          <a href="https://www.philipss.com" target="_blank">www.philipss.com</a>
+          adalah situs resmi dari <strong>Toko Philips</strong>, sebuah toko
+          perlengkapan rumah dan elektrikal terpercaya yang berlokasi di Kabupaten
+          Bulukumba, Sulawesi Selatan. beralamat di
+          <a href="https://maps.app.goo.gl/QxcisYdfz69mPDgMA?g_st=ac">
+            Jl. Poros Parukku, Desa Bulohloe, Dusun Parukku, Kecamatan Rilau Ale
+          </a>, toko ini hadir untuk memenuhi kebutuhan masyarakat akan
+          produk-produk rumah tangga dan instalasi listrik berkualitas.
+        </p>
 
-      <p class="p-2"><strong>Toko Philips</strong> menyediakan berbagai macam alat elektrikal seperti kabel, stop kontak, fitting lampu, saklar, panel listrik, dan aksesoris kelistrikan lainnya. nggak cuma itu, toko ini juga menjual berbagai perlengkapan rumah seperti <strong>gagang pintu, kunci, engsel, dan aksesoris bangunan</strong> lainnya.</p>
+        <p>
+          <strong>Toko Philips</strong> menyediakan berbagai macam alat elektrikal seperti kabel,
+          stop kontak, fitting lampu, saklar, panel listrik, dan aksesoris kelistrikan
+          lainnya. nggak cuma itu, toko ini juga menjual berbagai perlengkapan rumah seperti
+          <strong>gagang pintu, kunci, engsel, dan aksesoris bangunan</strong> lainnya.
+        </p>
 
-      <p class="p-2">dengan pelayanan yang ramah, harga bersahabat, dan produk-produk berkualitas, Toko Philips siap jadi pilihan utama masyarakat Bulukumba dan sekitarnya.</p>
-       </div>
-    <div class="photo">
-      <img src="image/WhatsApp Image 2025-07-25 at 10.21.26.jpeg" alt="Toko Philips">
-   </div>
-  </div>
-  </main>
-</section>
+        <p>
+          dengan pelayanan yang ramah, harga bersahabat, dan produk-produk berkualitas,
+          Toko Philips siap jadi pilihan utama masyarakat Bulukumba dan sekitarnya.
+        </p>
+      </div>
+
+      <div class="photo justify-center w-fit">
+        <img src="image/WhatsApp Image 2025-07-25 at 10.21.26.jpeg" alt="Toko Philips">
+      </div>
+    </div>
+  </section>
+</main>
+
 
 
   <!-- FOOTER -->
@@ -52,7 +79,8 @@
     </div>
 
     <div class="footer-center">
-    <a href="https" class="wa-button">
+    <a href="https://wa.me/6285399050825
+    " class="wa-button">
     <img src="image/whatsapp(1).png" alt="logo wa" class="wa-icon" />Chat Di WhatsApp
     </a>
    </div>
@@ -61,6 +89,55 @@
     <img src="image/logo p.png" alt="logo toko" class="footer-logo" />
    </div>
   </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const burger = document.querySelector(".burger-menu");
+      const navMenu = document.querySelector(".nav-right");
+    
+      if (burger && navMenu) {
+        burger.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+      } else {
+        console.error("Elemen burger-menu atau nav-right tidak ditemukan");
+      }
+    });
+  </script>
+
+<script>
+    
+  let lastScrollTop = 0;
+  const navMenu = document.getElementById("navMenu");
+
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && navMenu.classList.contains("show")) {
+      navMenu.classList.remove("show");
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+  });
+
+  document.addEventListener("click", function (event) {
+const navMenu = document.querySelector(".nav-right");
+const burger = document.querySelector(".burger-menu");
+
+if (
+  navMenu.classList.contains("show") &&
+  !navMenu.contains(event.target) &&
+  !burger.contains(event.target)
+) {
+  navMenu.classList.remove("show");
+}
+});
+
+</script>
+
+<script src="script.js"></script>
+
 
 </body>
 </html>
